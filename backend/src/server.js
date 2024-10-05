@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // Serve static files from the uploads directory
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
 // dbConnection
