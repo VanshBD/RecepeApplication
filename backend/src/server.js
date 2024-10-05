@@ -1,9 +1,9 @@
 const express = require("express");
-const dbConnection = require("./src/config/db");
-const Config = require("./src/config");
+const dbConnection = require("./config/db");
+const Config = require("./config");
 const cors = require("cors");
-const userRoutes = require("./src/routes/userRoutes");
-const recipeRoutes = require("./src/routes/recipeRoutes");
+const userRoutes = require("./routes/userRoutes");
+const recipeRoutes = require("./routes/recipeRoutes");
 const path = require("path");
 
 const app = express();
@@ -17,6 +17,7 @@ app.use(cors());
 
 // Serve static files from the uploads directory
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 // dbConnection
 dbConnection();
