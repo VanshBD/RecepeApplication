@@ -24,6 +24,9 @@ dbConnection();
 // api routes s
 app.use("/api/users", userRoutes);
 app.use("/api/recipes", recipeRoutes);
+app.get('/',(req,res)=>{
+  res.status(200).send('server started ')
+})
 
 app.listen(PORT, (err) => {
   if (err) {
